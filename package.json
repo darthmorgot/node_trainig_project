@@ -1,0 +1,24 @@
+{
+  "name": "node_trainig_project",
+  "version": "1.0.0",
+  "description": "Node training project",
+  "main": "index.js",
+  "scripts": {
+    "test:lint": "eslint .",
+    "test": "npm run test:lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darthmorgot/node_trainig_project.git"
+  },
+  "author": "Master",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darthmorgot/node_trainig_project/issues"
+  },
+  "homepage": "https://github.com/darthmorgot/node_trainig_project#readme",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-htmlacademy": "^2.1.0"
+  }
+}
