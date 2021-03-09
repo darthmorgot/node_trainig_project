@@ -10,5 +10,8 @@
     "browser": false,
     "mocha": true
   },
-  "extends": "htmlacademy/node"
+  "extends": "htmlacademy/node",
+  "rules": {
+    "quotes": ["error", "single", {"allowTemplateLiterals": true}]
+  }
 }
