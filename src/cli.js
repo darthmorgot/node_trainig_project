@@ -1,7 +1,7 @@
 const authorCommand = require('./cli/author.js');
 const versionCommand = require('./cli/version.js');
 const generateCommand = require('./cli/generate.js');
-const server = require('./server.js');
+const server = require('../src/server/server.js');
 
 const helpCommand = {
   name: `help`,
