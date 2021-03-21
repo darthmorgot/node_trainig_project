@@ -140,7 +140,9 @@
 // ---------------------------------------------------------------
 
 const express = require(`express`);
-const wizardsRouter = require(`./wizards/route`);
+const wizardStore = require('./wizards/store.js');
+const imageStore = require('./images/store.js');
+const wizardsRouter = require(`./wizards/route`)(wizardStore, imageStore);
 
 const app = express();
 app.use(express.static(`static`));
