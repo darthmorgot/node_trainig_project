@@ -143,20 +143,21 @@ const express = require(`express`);
 const wizardStore = require('./wizards/store.js');
 const imageStore = require('./images/store.js');
 const wizardsRouter = require(`./wizards/route`)(wizardStore, imageStore);
+const logger = require('../logger.js');
 
 const app = express();
 app.use(express.static(`static`));
 
 app.use(`/api/wizards`, wizardsRouter);
 
-const HOSTNAME = `127.0.0.1`;
-const PORT = 3000;
+const HOSTNAME = process.env.SERVER_HOST || `127.0.0.1`;
+const PORT = parseInt(process.env.SERVER_PORT, 10) || 3000;
 
 const serverAddress = `http://${HOSTNAME}:${PORT}`;
 module.exports = {
   run() {
     app.listen(PORT, HOSTNAME, () => {
-      console.log(`Server running at ${serverAddress}/`);
+      logger.info(`Server running at ${serverAddress}/`);
     });
   },
   app
